@@ -51,4 +51,4 @@ melt.data <- melt(extract.data, id=c("subject_ID", "activity"))
 summary.mean <- dcast(melt.data, subject_ID+activity ~ variable, mean)
 
 #write the dataset to csv
-write.csv(summary.mean, file = "./summary_mean.csv", row.names = FALSE)
+write.table(summary.mean, file = "./summary_mean.txt", row.names = FALSE)
